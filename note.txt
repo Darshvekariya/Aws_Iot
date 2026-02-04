@@ -1,0 +1,5 @@
+pip install awsiotsdk psutil
+laptops/+/data    #mqtt test change laptop 
+SELECT *, topic(2) as device_id, timestamp() as timestamp FROM 'laptops/+/data'   #role change laptop woth my templete 
+
+register.py mate aws iot core--> domain configuration --> copy domain name and replace end point in register.py with new certificates 
