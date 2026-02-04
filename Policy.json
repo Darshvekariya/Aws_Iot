@@ -1,0 +1,31 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "iot:Connect",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Publish",
+        "iot:Receive"
+      ],
+      "Resource": [
+        "arn:aws:iot:us-east-1:359623882003:topic/$aws/certificates/create/*",
+        "arn:aws:iot:us-east-1:359623882003:topic/$aws/provisioning-templates/laptops/provision/*",
+        "arn:aws:iot:us-east-1:359623882003:topic/laptops/*/data"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": [
+        "arn:aws:iot:us-east-1:359623882003:topicfilter/$aws/certificates/create/*",
+        "arn:aws:iot:us-east-1:359623882003:topicfilter/$aws/provisioning-templates/laptops/provision/*",
+        "arn:aws:iot:us-east-1:359623882003:topicfilter/laptops/*/data"
+      ]
+    }
+  ]
+}
